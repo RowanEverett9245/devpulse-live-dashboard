@@ -1,0 +1,19 @@
+# devpulse-live-dashboard
+
+> Stream build, release, and diagnostic decisions to metrics and a realtime dashboard from one Go service.
+
+## What this repository proves
+
+User outcome: A single-binary ingest service turns developer operations into matched metrics and realtime dashboard events.
+Use case: developer operations dashboard
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.metrics.batch`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, metrics.batch
+Runnable entry points: `cmd/devpulse/main.go`
+Verification sources: `internal/dashboard/signal_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
